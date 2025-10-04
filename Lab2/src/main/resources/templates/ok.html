@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- resources/templates/ok.html -->
+<form action="/ctrl/ok" method="post">
+    <button name="btn" value="ok1">OK 1</button>
+    <button name="btn" value="ok2" formmethod="get">OK 2</button>
+    <button name="btn" value="ok3" formaction="/ctrl/ok?x" >OK 3</button>
+</form>
+
+<p>Kết quả: <span th:text="${msg}"></span></p>
+
+</body>
+</html>
