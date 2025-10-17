@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Param Form</title>
+</head>
+
+<body>
+
+
+    <!-- <form action="/param/save/2021" method="post">
+    <input name="y" value="2031">
+    <button>Save</button>
+</form>
+
+<ul>
+    <li th:text="${x}">x</li>
+    <li th:text="${y}">y</li>
+</ul> -->
+
+<!-- Form nhập dữ liệu -->
+   <h2>Form nhập sản phẩm</h2>
+<form action="/product/save" method="post" th:object="${product}">
+    <input th:field="*{name}" placeholder="Tên sản phẩm"/><br>
+    <input th:field="*{price}" placeholder="Giá sản phẩm"/><br>
+    <button type="submit">Save</button>
+</form>
+
+<h2>Sản phẩm ban đầu (GET)</h2>
+<ul>
+    <li th:text="${product.name}">Tên</li>
+    <li th:text="${product.price}">Giá</li>
+</ul>
+
+<h2>Danh sách sản phẩm khác</h2>
+<ul>
+    <th:block th:each="item : ${items}">
+        <li th:text="${item.name}">Tên</li>
+        <li th:text="${item.price}">Giá</li>
+    </th:block>
+</ul>
+
+
+</body>
+
+</html>
