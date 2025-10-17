@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Đăng ký thành công</title>
+</head>
+<body>
+    <h2>Chào, <span th:text="${username}">username</span>!</h2>
+    <p>Bạn đã đăng ký thành công 🎉</p>
+    <p>Mật khẩu của bạn: <span th:text="${password}">password</span></p>
+    <div>
+        <p>Ảnh đại diện của bạn:</p>
+        <img th:src="${photoPath}" alt="avatar" style="max-width: 200px; border-radius: 10px;">
+    </div>
+</body>
+</html>
